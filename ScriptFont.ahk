@@ -1,7 +1,7 @@
 ﻿#Requires AutoHotkey v1.1.36+
 #Include %A_ScriptDir%
 #Include .\lib\FontResource.ahk
-#Include .\lib\GdipInit.ahk
+;  #Include .\lib\GdipInit.ahk
 #Include .\lib\GdipPrivateFont.ahk
 #Include .\lib\getFullPathName.ahk
 #Include .\lib\getScriptGuiClassName.ahk
@@ -27,13 +27,14 @@ class VersionManager_ScriptFont
         SCRIPTFONT_VERSION := "1.1.1"
         if (!this._verCheck(FONTRESOURCE_VERSION, "1.0.0"))
             throw exception("FontResource version 1.x is required (minimum 1.0.0).")
+        /*
         if (!this._verCheck(GDIPINIT_VERSION, "1.0.0"))
             throw exception("GdipInit version 1.x is required (minimum 1.0.0).")
+        */
         if (!this._verCheck(GDIPPRIVATEFONT_VERSION, "1.0.0"))
             throw exception("GdipPrivateFont version 1.x is required (minimum 1.0.0).")
         if (!this._verCheck(GETSCRIPTGUICLASSNAME_VERSION, "1.0.0"))
             throw exception("getScriptGuiClassName version 1.x is required (minimum 1.0.0).")
-        
         return true
     }
     _verCheck(byRef actual, required)    {
