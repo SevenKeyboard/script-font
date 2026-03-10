@@ -33,6 +33,8 @@ class VersionManager_ScriptFont
         */
         if (!this._verCheck(GDIPPRIVATEFONT_VERSION, "1.0.0"))
             throw exception("GdipPrivateFont version 1.x is required (minimum 1.0.0).")
+        if (!this._verCheck(GETFULLPATHNAME_VERSION, "1.0.0"))
+            throw exception("getFullPathName version 1.x is required (minimum 1.0.0).")
         if (!this._verCheck(GETSCRIPTGUICLASSNAME_VERSION, "1.0.0"))
             throw exception("getScriptGuiClassName version 1.x is required (minimum 1.0.0).")
         return true
