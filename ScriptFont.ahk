@@ -24,9 +24,9 @@ class VersionManager_ScriptFont
     static _ := VersionManager_ScriptFont._init()
     _init()    {
         global
-        SCRIPTFONT_VERSION := "1.1.1"
-        if (!this._verCheck(FONTRESOURCE_VERSION, "1.0.0"))
-            throw exception("FontResource version 1.x is required (minimum 1.0.0).")
+        SCRIPTFONT_VERSION := "1.2.0"
+        if (!this._verCheck(FONTRESOURCE_VERSION, "2.0.0"))
+            throw exception("FontResource version 2.x is required (minimum 2.0.0).")
         /*
         if (!this._verCheck(GDIPINIT_VERSION, "1.0.0"))
             throw exception("GdipInit version 1.x is required (minimum 1.0.0).")
